@@ -1,7 +1,7 @@
 /**
  * AUTHOR: Jared Tanner
  * PURPOSE: Super simple pacman -> move the Pacman around with WASD; collision detection with walls; possibly collect dots, w/ score at top?
- * CURRENT OBJECTIVES: Make pacman start in middle; make letters yellow, with black outline; make letters edible once the player eats all the dots
+ * CURRENT OBJECTIVES: -
 **/
 
 /////////
@@ -197,16 +197,16 @@ class Game{
     pacman.draw()
 
   }
-
 }
 
+// set up env
+let canvas = document.getElementById('game');
+let ctx = canvas.getContext('2d')
+let width = 800, height = 600
 
 function start(){
-  let canvas = document.getElementById('game');
-  let ctx = canvas.getContext('2d')
-  
-  let game = new Game(ctx, 800, 600)
+
+  let game = new Game(ctx, width, height)
 
   window.requestAnimationFrame(game.gameLoop)
 }
-
